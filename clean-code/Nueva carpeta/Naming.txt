@@ -1,0 +1,25 @@
+saveUsers = Guardar listado de usuarios
+showPaymentTotal = Mostrar el total del pago
+puntuationResult = Resultado de la puntuación
+birthdate = Fecha de nacimiento
+momsName =Nombre de la mama
+dadName = Nombre del papa
+wrongOperation = ¿Operación erronea?
+clientLastName = Apellido del cliente
+numberAttendants = Número de asistentes
+studentAdress = Dirección del estudiante
+getAnimalData = Obtener datos basicos del animal
+prisonerCellNumber = Número de celda del preso
+kilometersToRome = Kilometros recorridos hasta Roma
+quantityScheduleTime = Cantidad de tiempo programando
+El pedido fue entregado
+getCompanies = Obtener empresas
+deleteCompany = Eliminar empresa
+updateCompany = Actualizar empresa
+getCompanies = Obtener empresa
+getSoccerScore = Obtener marcador del partido de futbol
+getBasketballScore = Obtener marcador del partido de basketball
+getFutsalaScore = Obtener marcador del partido de futsala
+makeHousingCredit = Realizar prestamo de vivienda
+makeCarLoan = Realizar prestamo de automovil
+makeInvestmentLoan = Realizar prestamo de libre inversión
