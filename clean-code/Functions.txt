@@ -30,3 +30,20 @@
 3. public boolean check() {
 	return a<max ? true : false;
 }
+
+palabras pregunta:
+has
+is
+can
+exist
+
+
+verbos:
+write
+save
+make
+do
+execute
+update
+delete
+set
