@@ -1,0 +1,32 @@
+1. boolean hasCreditCard(User user) {
+    if (user.hasCard) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+1. boolean hasCreditCard(User user) {
+        return user.hasCard;
+}
+//o lo elimino por que ya es un boolean
+
+
+2. Circle makeCircle(double x, double y, double radius);
+
+//añadiendole a circle los atributos
+2.Circle makeCircle(Circle);
+
+
+3. public boolean check() {
+    if (a < max) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+3. public boolean check() {
+	return a<max ? true : false;
+}
