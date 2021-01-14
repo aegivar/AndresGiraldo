@@ -47,3 +47,90 @@ execute
 update
 delete
 set
+
+ppublic class UserValidator {
+
+     private Cryptographer cryptographer;
+
+
+
+     public boolean checkPassword(String userName, String password) {
+
+       User user = UserGateway.findByName(userName);
+
+       if (user != User.NULL) {
+
+         String codedPhrase = user.getPhraseEncodedByPassword();
+
+         String phrase = cryptographer.decrypt(codedPhrase, password);
+
+         if ("Valid Password".equals(phrase)) {
+
+           Session.initialize();
+
+           return true;
+
+         }
+
+       }
+
+       return false;
+
+     }
+
+   }
+
+
+
+1. Eliminar código duplicado:
+
+function showDeveloperList(developers) {
+  developers.forEach(developer => {
+    const expectedSalary = developer.calculateExpectedSalary();
+    const experience = developer.getExperience();
+    const githubLink = developer.getGithubLink();
+    const data = {
+      expectedSalary,
+      experience,
+      githubLink
+    };
+
+    render(data);
+  });
+}
+
+function showManagerList(managers) {
+  managers.forEach(manager => {
+    const expectedSalary = manager.calculateExpectedSalary();
+    const experience = manager.getExperience();
+    const portfolio = manager.getMBAProjects();
+    const data = {
+      expectedSalary,
+      experience,
+      portfolio
+    };
+
+    render(data);
+  });
+}
+
+
+1. 
+
+function showEmployeeList(employees) {
+  employees.forEach(employee => {
+    const expectedSalary = employee.calculateExpectedSalary();
+    const experience = employee.getExperience();
+    const data = {
+      expectedSalary,
+      experience
+    };
+    switch 
+    (employee.position) 
+    {
+      case "manager": data.portfolio = employee.getMBAProjects();
+      case "developer": data.githubLink = employee.getGithubLink();
+    }
+    render(data);
+  });
+}
