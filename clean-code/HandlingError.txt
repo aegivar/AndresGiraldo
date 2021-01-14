@@ -1,0 +1,22 @@
+ 1. Refactorizar para que no devuelva null
+ 
+
+List<Employee> employees = getEmployees();
+
+   if (employees != null) {
+
+     for(Employee e : employees) {
+
+       totalPay += e.getPay();
+
+     }
+
+    }
+  
+public List<Employee> getEmployees() {
+
+     if( .. there are no employees .. )
+
+       return Collections.emptyList();
+
+}
