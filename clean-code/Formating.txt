@@ -1,0 +1,46 @@
+Formating
+
+1. Aplique el principio de apertura vertical entre conceptos
+
+
+  package fitnesse.wikitext.widgets;
+
+   import java.util.regex.*;
+
+   public class BoldWidget extends ParentWidget {
+
+
+     public BoldWidget(ParentWidget parent, String text) throws Exception {
+	 
+		private static final String REGEXP = “’’’.+?’’’”;
+	 
+		private static final Pattern pattern = 
+			Pattern.compile(“’’’(.+?)’’’”,Pattern.MULTILINE + Pattern.DOTALL);
+
+       super(parent);
+       Matcher match = pattern.matcher(text);
+       match.find();
+       addChildWidgets(match.group(1));
+	 }
+
+     public String render() throws Exception {
+
+       StringBuffer html = new StringBuffer(“<b>”);
+       html.append(childHtml()).append(“</b>”);
+       return html.toString();
+
+     }
+
+   }
+
+
+   2.    Densidad vertical
+    
+    public class ReporterConfig {
+
+     private List<Property> properties = new ArrayList<Property>();
+
+     public void addProperty(Property property) {
+       properties.add(property);
+     }
+	}
