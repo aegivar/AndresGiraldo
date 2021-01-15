@@ -1,0 +1,73 @@
+1.
+
+package solid;
+
+class UserLogin {
+
+    private final DataBase db;
+
+    UserLogin(DataBase db) {
+        this.db = db;
+    }
+
+    void login(String userName, String password) {
+        User user = db.findUserByUserName(userName);
+        if (user == null) {
+            // do something
+        }
+        // login process..
+    }
+
+
+
+}
+
+class SendMail(){
+	    void sendEmail(User user, String msg) {
+        // sendEmail email to user
+    }
+}
+
+
+2. 
+
+public class Vehicle {
+
+	public int getWheelCount() {
+	return 4;
+	}
+
+	public int getMaxSpeed() {
+		return 200;
+	}
+
+	@Override public String toString() {
+		return "wheelCount=" + getWheelCount() + ", maxSpeed=" + getMaxSpeed();
+	}
+}
+
+public class Print{
+
+		public void print() {
+		System.out.println(toString());
+	}
+}
+
+3. 
+class Coche {  
+    String marca;
+
+    Coche(String marca){
+		this.marca = marca; 
+	}
+
+    String getMarcaCoche(){ 
+		return marca; 
+	}
+}
+
+class transactions(){
+	 void guardarCocheDB(Coche coche){ 
+		... 
+	}
+}
