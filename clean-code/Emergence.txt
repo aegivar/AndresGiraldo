@@ -1,0 +1,62 @@
+1.)
+scaleToOneDimension y rotate
+
+    public void scaleToOneDimension(float desiredDimension, float imageDimension) {
+	
+		if (Math.abs(desiredDimension - imageDimension) < errorThreshold){
+			return;
+		}
+		float scalingFactor = desiredDimension / imageDimension;
+		scalingFactor = (float)(Math.floor(scalingFactor * 100) * 0.01f);
+		RenderedOp newImage = ImageUtilities.getScaledImage(image, scalingFactor, scalingFactor);
+		cleanImage();
+		image = newImage;
+   }
+
+   public synchronized void rotate(int degrees) {
+
+      RenderedOp newImage = ImageUtilities.getRotatedImage( image, degrees);
+	  cleanImage();
+	  image = newImage;
+   }
+   
+   public RenderedOp cleanImage(){   
+		image.dispose();
+		System.gc();		
+   }
+
+2.) Crear y nombrar los metodos, 
+
+ejemplo:
+
+Para:     // code to calculate vacation based on hours worked to date
+
+creamos -->  calculateBaseVacationHours();
+
+Implementación --> 
+
+private void calculateBaseVacationHours() { /* … */ };
+
+      abstract protected void alterForLegalMinimums();
+
+      private void applyToPayroll() { /* … */ };
+
+   }
+
+
+-----------------------------------------------
+
+public class VacationPolicy {
+
+    public void accrueDivisionVacation(country){
+
+         // code to calculate vacation based on hours worked to date
+		calculateVacationBasedHours(country)
+         // code to ensure vacation meets US minimums
+		ensureVacationMeetsMinimums(country)
+         // code to apply vacation to payroll record
+		vacationToPayroll(country)
+         
+	}
+
+   }
