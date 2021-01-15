@@ -68,10 +68,10 @@ function paint(car) {
 
 NOMBRES DE CLASES VARIABLES CONSTANTES:
 
-nombres de clases:UpperCamelcalse
-nombres de funciones:lowerCamelCase
-variables:lowerCamelCase
-constantes:UPPERCASE separado por "_"
+nombres de clases:UpperCamelcalse ->y el nombre que sea claro con lo que contiene la clase
+nombres de funciones:lowerCamelCase -> nombre debe estar acorde y especifica como pueda y que represente su acción
+variables:lowerCamelCase -> las variabes no deben tener numeracion y no deben ser monosilabos deben decir algo
+constantes:UPPERCASE separado por "_" 
 
 
 
