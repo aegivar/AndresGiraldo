@@ -4,13 +4,15 @@ GPS para localizar mascotas: Ubicación y Alertas
 Precondicion: La mascota debe tenr implantado el chip con gps y El propietario debe tener encendida la aplicación:
 
 Descripcion: El sistema debe mostrar la ubicacion de la mascota 
+
 paso 1:El sistema debe mostrar la ubicacion actual de la mascota y el usuario debe validar la posicion inicial para calibrar la ubicacion 
 paso 2:A medida que la mascota avanza se debe ver en un mapa la ubicación con un punto rojo y una linea punteada marcando el recorrido
 paso 3:El sistema debe poder almacenar los recorridos hechos por la mascota
 paso 4:Los recorridos deben tener la vigencia de minimo un mes
 
 
-Descripción: El sistema debe poder generar alertas
+Alertas: El sistema debe poder generar alertas
 paso 1:Si la mascota se aleja mas de 200 metros se debe generar una alerta de advertencia
 paso 2:Si la mascota se aleja mas de 500 metros se debe generar una alerta de peligro ya que se pudo escapar
-paso 3:Se deben poder configurar las alertas
+paso 3:Se deben poder configurar las alertas en cuanto a distancia y tonos según la distancia
+
