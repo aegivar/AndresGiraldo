@@ -1,0 +1,68 @@
+ Se intenta realizar un pago de un cupon y luego de validar el precio se encuentra que el código del cupón es invalido. 
+ 
+ Aplique el SRP e indique que problema hay en la operación anterior y diga como solucionarlo mediante código o arquitectura.
+ 
+ EL problema es que se debe validar primero el codigo y la validacion y el pago son diferentes procesos:
+
+
+public class processCoupon {
+    public static void main(String[] args) {
+        Coupon coupon = new coupon(args[0]);
+		boolean validCoupon = isCouponCodeValid(coupon.code)
+		if(validCoupon){
+			payCoupon(coupon);
+		}
+     
+    }
+}
+
+class validationCoupons{
+	public boolean isCouponCodeValid(String code){
+		if(db.find(code)>0){
+			return true;
+		}
+		return false;
+	}
+}
+
+class couponDao{
+	public cupon payCupon(Coupon coupon){
+		cupon.setPayed =  true;
+		coupon.save();
+	}
+	.
+	.
+	.
+	.
+	public save(){
+		......
+	}
+ }
+public class Coupon {
+	long value;
+	String code;
+	boolean payed;
+	
+	public long getValue() {
+		return valor;
+	}
+	public void setValue(long value) {
+		this.value = value;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.codigo = codigo;
+	}
+	
+	public boolean getPayed() {
+	return payed;
+	}
+	public void setPayed(boolean payed) {
+		this.payed = payed;
+	}
+	
+
+	
+}
