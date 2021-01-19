@@ -21,3 +21,10 @@ public abstract class Student {
 		}
 
 	}
+	public class Universitary extends Student {
+		@Override
+		public void introduce() {
+			System.out.println("I am an Universitary Student");
+		}
+
+	}
