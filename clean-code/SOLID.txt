@@ -28,13 +28,13 @@ class validationCoupons{
 class couponDao{
 	public cupon payCupon(Coupon coupon){
 		cupon.setPayed =  true;
-		coupon.save();
+		coupon.update();
 	}
 	.
 	.
 	.
 	.
-	public save(){
+	public update(){
 		......
 	}
  }
