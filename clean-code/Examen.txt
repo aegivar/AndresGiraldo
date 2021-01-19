@@ -119,7 +119,7 @@ String body = FORMAL_BODY.replaceFirst({product}, product.getName()).replaceFirs
 sender.send(subject, addressee);
 }
 
-
+R//
   public void processProduct(Product product){
     	 log.debug("Executing processProduct with parameter: " + product);
 
@@ -141,8 +141,8 @@ sender.send(subject, addressee);
     }
 	
 	private long calculateValue(Product product){
-	long totalCost = 0L;
-	switch(product.getCode()){
+		long totalCost = 0L;
+		switch(product.getCode()){
 			  case 1:
 				 totalCost = product.getCost() * 0.85;
 				break;
@@ -202,6 +202,7 @@ class NestedIfElse1 {
     }
 }
 
+R//
 class NestedIfElse1 {
 
 
@@ -272,6 +273,7 @@ class SessionService1 {
     }
 }
 
+R//
 class User {
 
 	private Session session;
@@ -322,7 +324,7 @@ import java.util.function.BinaryOperator;
 public class Duplication {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
-        Integer product = Math2.sum(numbers);
+        Integer product = Math1.sum(numbers);
         System.out.println(product);
     }
 }
@@ -330,10 +332,9 @@ public class Duplication {
 //with duplication
 class Math1 {
     public static Integer sum(List<Integer> numbers) {
-        Integer sum = 0;
-        for (Integer n : numbers) {
-            sum += n;
-        }
+        Integer sum = numbers.stream()   
+							 .collect(summingInt(x -> x.intValue()));
+        
         return sum;
     }
 
