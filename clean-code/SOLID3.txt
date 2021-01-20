@@ -1,0 +1,108 @@
+Quieren una aplicación que realice el calculo la calificación de las materias de una escuela con base en las tareas y los examenes.
+Pero cada maestro determina cual es el porcentaje de valor de ellos.
+Aplicar mediante código una el principio en esta situación.
+
+public class Notas{
+
+	public static void main(String[] args) {
+		Matematicas matematicas = new Matematicas(30, 70);
+		Ciencias ciencias = new Ciencias(50, 50);
+		Religion religion = new Religion(40, 60);
+		
+		matematicas.setNotaExamenes(3);
+		matematicas.setNotaTareas(5);
+		
+		ciencias.setNotaExamenes(5);
+		ciencias.setNotaTareas(5);
+		
+		religion.setNotaExamenes(2);
+		religion.setNotaTareas(5);
+		
+		double notaMatematicas = matematicas.getCalificacion(matematicas);
+		double notaCiencias = ciencias.getCalificacion(ciencias);
+		double notaReligion = religion.getCalificacion(religion);
+		
+		System.out.println("Nota en Matematicas es :"+notaMatematicas);
+		System.out.println("Nota en Ciencias es :"+notaCiencias);
+		System.out.println("Nota en Religion es :"+notaReligion);
+	}
+
+}
+
+public class Calificacion {
+	private int porcentajeTareas;
+	private int porcentajeExamenes;
+	private int notaTareas;
+	private int notaExamenes;
+	public Calificacion(int porcentajeTareas, int porcentajeExamenes) {
+		super();
+		this.porcentajeTareas = porcentajeTareas;
+		this.porcentajeExamenes = porcentajeExamenes;
+	}
+	
+	public int getNotaTareas() {
+		return notaTareas;
+	}
+	
+	public void setNotaTareas(int notaTareas) {
+		this.notaTareas = notaTareas;
+	}
+	
+	public int getNotaExamenes() {
+		return notaExamenes;
+	}
+	
+	public void setNotaExamenes(int notaExamenes) {
+		this.notaExamenes = notaExamenes;
+	}
+	public int getPorcentajeTareas() {
+		return porcentajeTareas;
+	}
+
+	public void setPorcentajeTareas(int porcentajeTareas) {
+		this.porcentajeTareas = porcentajeTareas;
+	}
+	public int getPorcentajeExamenes() {
+		return porcentajeExamenes;
+	}
+	public void setPorcentajeExamenes(int porcentajeExamenes) {
+		this.porcentajeExamenes = porcentajeExamenes;
+	}
+	
+	
+	public int getCalificacion(Calificacion calificacion) {
+		int calificacionFinal = calificacion.getNotaExamenes()*calificacion.getPorcentajeExamenes()+ calificacion.getNotaTareas()*calificacion.getNotaTareas();
+		return calificacionFinal;
+	}
+	
+}
+
+public class Matematicas extends Calificacion {
+
+	public Matematicas(int porcentajeTareas, int porcentajeExamenes) {
+		super(porcentajeTareas, porcentajeExamenes);
+		
+	}
+
+
+}
+
+public class Ciencias extends Calificacion {
+
+	public Ciencias(int porcentajeTareas, int porcentajeExamenes) {
+		super(porcentajeTareas, porcentajeExamenes);
+		
+	}
+
+
+}
+
+public class Religion extends Calificacion {
+
+	public Religion(int porcentajeTareas, int porcentajeExamenes) {
+		super(porcentajeTareas, porcentajeExamenes);
+		
+	}
+
+
+}
