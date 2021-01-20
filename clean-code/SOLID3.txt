@@ -71,7 +71,7 @@ public class Calificacion {
 	
 	
 	public int getCalificacion(Calificacion calificacion) {
-		int calificacionFinal = calificacion.getNotaExamenes()*calificacion.getPorcentajeExamenes()+ calificacion.getNotaTareas()*calificacion.getNotaTareas();
+		int calificacionFinal = calificacion.getNotaExamenes()*calificacion.getPorcentajeExamenes()+ calificacion.getNotaTareas()*calificacion.getPorcentajeTareas();
 		return calificacionFinal;
 	}
 	
