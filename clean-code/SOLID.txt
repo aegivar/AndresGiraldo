@@ -2,7 +2,7 @@
  
  Aplique el SRP e indique que problema hay en la operación anterior y diga como solucionarlo mediante código o arquitectura.
  
- EL problema es que se debe validar primero el codigo y la validacion y el pago son diferentes procesos:
+ EL problema es que se debe validar primero el codigo, la validacion y el pago son diferentes procesos:
 
 
 public class processCoupon {
@@ -26,22 +26,14 @@ class validationCoupons{
 }
 
 class couponDao{
-	public cupon payCupon(Coupon coupon){
-		cupon.setPayed =  true;
-		coupon.update();
-	}
-	.
-	.
-	.
-	.
 	public update(){
 		......
 	}
  }
+
 public class Coupon {
 	long value;
 	String code;
-	boolean payed;
 	
 	public long getValue() {
 		return valor;
@@ -55,14 +47,21 @@ public class Coupon {
 	public void setCode(String code) {
 		this.codigo = codigo;
 	}
+		
+}
+
+public class payment(){
+	boolean payed;
 	
 	public boolean getPayed() {
-	return payed;
+		return payed;
 	}
+	
 	public void setPayed(boolean payed) {
 		this.payed = payed;
 	}
 	
-
-	
+	public cupon payCupon(Coupon coupon){
+		cupon.setPayed =  true;
+	}
 }
