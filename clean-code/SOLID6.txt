@@ -34,9 +34,9 @@ public class ShoppingBasket {
 	public static void main(String[] args) {
 		SqlDatabase sqlDataBase = new SqlDatabase();
 		CreditCard creditCard = new CreditCard();
-		ShoppingProduct shoppingProduct = new ShoopingProduct();
-		
+		ShoppingProduct shoppingProduct = new ShoopingProduct();		
 		Shopping shopping = new Shopping(sqlDataBase,creditCard);
+		
 		shopping.pay(shoppingProduct);
 		shopping.save(shoppingProduct);
 	}

@@ -110,6 +110,7 @@ public class TransactionFraudException extends Exception {
 
 4. Aplique el principio de sustitución de liskov para la imagen
 
+	- imagen punto 4.png
 
 
 5.   Nuestra aplicación bancaria admite dos tipos de cuentas: "corriente" y "ahorros".
@@ -394,7 +395,8 @@ class AudiobookUI implements BookAudio {
 9.  Liste las ideas de Martin Fowler https://martinfowler.com/articles/dipInTheWild.html en el apartado: You mean Dependency Inversion, Right?
 
 La inyección de dependencia se trata de cómo un objeto sabe acerca de otro objeto dependiente
-
+La inversion de control es la capacidad de manejar el control de los mensajes y de donde empieza y donde termina un programa
+El principio de inyecccion de dependencias es 
 
 
 
