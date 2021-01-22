@@ -1,0 +1,7 @@
+PRestamo de libros
+
+Una persona puede solicitar solo 2 libros al tiempo
+Los datos de la persona deben estar registrados (cc nombre apellidos telefono)
+Los libros se pueden prestar maximo por 1 mes y solo se pueden hacer renovaciones por una semana mas
+El usuario debe devolver el libro cuando se cumpla el tiempo
+
