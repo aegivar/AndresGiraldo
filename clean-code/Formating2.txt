@@ -1,0 +1,107 @@
+Formating
+
+1. Aplique el principio de apertura vertical entre conceptos
+
+
+  package fitnesse.wikitext.widgets;
+
+   import java.util.regex.*;
+
+   public class BoldWidget extends ParentWidget {
+
+     public static final String REGEXP = “’’’.+?’’’”;
+
+     private static final Pattern pattern = Pattern.compile(“’’’(.+?)’’’”,
+
+       Pattern.MULTILINE + Pattern.DOTALL);
+
+     public BoldWidget(ParentWidget parent, String text) throws Exception {
+
+       super(parent);
+
+       Matcher match = pattern.matcher(text);
+
+       match.find();
+
+       addChildWidgets(match.group(1));}
+
+     public String render() throws Exception {
+
+       StringBuffer html = new StringBuffer(“<b>”);
+
+       html.append(childHtml()).append(“</b>”);
+
+       return html.toString();
+
+     }
+
+   }
+
+
+   2.    Densidad vertical
+    
+    public class ReporterConfig {
+
+
+
+     /**
+
+      * The class name of the reporter listener
+
+      */
+
+     private String m_className;
+
+
+
+     /**
+
+      * The properties of the reporter listener
+
+      */
+
+     private List<Property> m_properties = new ArrayList<Property>();
+
+
+
+     public void addProperty(Property property) {
+
+       m_properties.add(property);
+
+     }
+
+
+3. Organizar el siguiente código:
+
+public class FitNesseServer implements SocketServer { private FitNesseContext 
+
+   context; public FitNesseServer(FitNesseContext context) { this.context = 
+
+   context; } public void serve(Socket s) { serve(s, 10000); } public void 
+
+   serve(Socket s, long requestTimeout) { try { FitNesseExpediter sender = new 
+
+   FitNesseExpediter(s, context); 
+
+   sender.setRequestParsingTimeLimit(requestTimeout); sender.start(); } 
+
+   catch(Exception e) { e.printStackTrace(); } } }
+
+
+
+4. Principio de no romper la identación:
+
+
+public class CommentWidget extends TextWidget
+
+   {
+
+     public static final String REGEXP = “^#[^\r\n]*(?:(?:\r\n)|\n|\r)?”;
+
+
+
+     public CommentWidget(ParentWidget parent, String text){super(parent, text);}
+
+     public String render() throws Exception {return “”; }
+
+   }

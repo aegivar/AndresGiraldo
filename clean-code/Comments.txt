@@ -10,7 +10,7 @@
 2. Convierta el siguiente código para no usar el comentario.
 
 
-// Returns an instance of the Responder bei
+// Returns an instance of the Responder being tested
  protected abstract Responder responderInstance();
 
 
