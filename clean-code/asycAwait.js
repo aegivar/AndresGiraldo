@@ -11,14 +11,7 @@
         let promise, resultadoSuma = x + y;
         return promise = new Promise(resolve => resolve(resultadoSuma));
         };
-    /*const comprarTresEmpanadas = empanadasActuales => {
-        let promise, empanadas = empanadasActuales + 3;
-        return promise = new Promise(resolve => resolve(empanadas));
-    };
-    const comprarCincoEmpanadas = empanadasActuales => {
-        let promise, empanadas = empanadasActuales + 5;
-        return promise = new Promise(resolve => resolve(empanadas));
-    };*/
+
   let x = 5;
   let y = 3;
   async function calculadora(){
