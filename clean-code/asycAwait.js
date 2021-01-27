@@ -4,11 +4,11 @@
        };
         
         const restar = (x,y) => {
-        let promise, resultadoSuma = x + y;
+        let promise, resultadoSuma = x - y;
         return promise = new Promise(resolve => resolve(resultadoSuma));
         };
         const multiplicar = (x,y) => {
-        let promise, resultadoSuma = x + y;
+        let promise, resultadoSuma = x * y;
         return promise = new Promise(resolve => resolve(resultadoSuma));
         };
 
