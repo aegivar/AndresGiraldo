@@ -1,4 +1,24 @@
 MathematicsOperations.java
  MathematicsOperations
+MyThread.java
+ MyThread
+FunctionalInterfacesExample.java
+ FunctionalInterfacesExample
 Main.java
  Main
+MainRunnable.java
+ MainRunnable
+BankAdvisor.java
+ BankAdvisor
+OperationInterfaces.java
+ OperationInterfaces
+StoreCashier.java
+ StoreCashier
+MainWithdrawal.java
+ MainWithdrawal
+MainThread.java
+ MainThread
+StoreCashierThread.java
+ StoreCashierThread
+Costumer.java
+ Costumer

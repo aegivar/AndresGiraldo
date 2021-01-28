@@ -12,7 +12,8 @@ public class MathematicsOperations {
     }
 
     public long multiplicacion(long x,long y){
-         return x * y;
+
+        return x * y;
     }
 
     public long factorial(long number){
@@ -23,5 +24,15 @@ public class MathematicsOperations {
         }
         return factorial;
     }
+
+    public String concatC(){
+        String c ="";
+        for(int i=0;i<=500000;i++)
+        {
+            c+="C";
+        }
+        return c;
+    }
+
 
 }
