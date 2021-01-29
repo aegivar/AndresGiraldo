@@ -1,6 +1,4 @@
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 public class MainWithdrawal {
     //ejercicio runnable
@@ -36,7 +34,7 @@ public class MainWithdrawal {
     }
 
     //ejercicio executorService
-    public static void main(String[] args) {
+    public static void mainexecutorService(String[] args) {
         BankAdvisor bankAdvisorA = new BankAdvisor("Pedro");
         BankAdvisor bankAdvisorB = new BankAdvisor("Juan");
 
@@ -47,6 +45,20 @@ public class MainWithdrawal {
 
         executors.execute(() -> bankAdvisorA.withdrawal(costumerA,initialTime));
         executors.execute(() -> bankAdvisorB.withdrawal(costumerB,initialTime));
+    }
+
+    //ejercicio executorService
+    public static void main(String[] args) {
+        BankAdvisor bankAdvisorA = new BankAdvisor("Pedro");
+        BankAdvisor bankAdvisorB = new BankAdvisor("Juan");
+
+        Costumer costumerA = new Costumer("Andres",new long[]{200,100,500,200,300});
+        Costumer costumerB = new Costumer("Eduardo",new long[]{400,100,400,100,100,400,500,300});
+
+        ScheduledExecutorService executors = Executors.newScheduledThreadPool(5);
+
+        executors.scheduleWithFixedDelay(() -> bankAdvisorA.withdrawal(costumerA,initialTime),10, 10, TimeUnit.SECONDS);
+        executors.scheduleWithFixedDelay(() -> bankAdvisorB.withdrawal(costumerB,initialTime),20, 10,TimeUnit.SECONDS);
     }
 
 }
