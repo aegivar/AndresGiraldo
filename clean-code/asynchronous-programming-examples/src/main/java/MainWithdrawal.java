@@ -1,6 +1,10 @@
+import java.util.concurrent.Executor;
+
 public class MainWithdrawal {
-    public static void main(String[] args) {
-        long initialTime = System.currentTimeMillis();
+    //ejercicio runnable
+    static long initialTime = System.currentTimeMillis();
+    public static void main1(String[] args) {
+
         Costumer costumerA = new Costumer("Andres",new long[]{200,100,500,200,300});
         Costumer costumerB = new Costumer("Eduardo",new long[]{400,100,400,100,100,400,500,300});
 
@@ -14,5 +18,18 @@ public class MainWithdrawal {
 
         new Thread(process1).start();
         new Thread(process2).start();
+    }
+    //ejercicio Executor
+    public static void main(String[] args) {
+        BankAdvisor bankAdvisorA = new BankAdvisor("Pedro");
+        BankAdvisor bankAdvisorB = new BankAdvisor("Juan");
+
+        Costumer costumerA = new Costumer("Andres",new long[]{200,100,500,200,300});
+        Costumer costumerB = new Costumer("Eduardo",new long[]{400,100,400,100,100,400,500,300});
+
+        Executor executor = (command) -> new Thread(command).start();
+
+        executor.execute(() -> bankAdvisorA.withdrawal(costumerA,initialTime));
+        executor.execute(() -> bankAdvisorB.withdrawal(costumerB,initialTime));
     }
 }

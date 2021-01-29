@@ -9,21 +9,53 @@ import com.jcabi.aspects.Async;
 
 import java.util.concurrent.*;
 public class Main {
-    private static final long NUMBER = 8;
+    //private static final long NUMBER = 8;
     private static final long X = 5;
     private static final long Y = 2;
     private static MathematicsOperations mathematicsOperations = new MathematicsOperations();
 
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        Costumer costumerA = new Costumer("Andres",new int[]{2,1,5,2,3});
+    public static void main2(String[] args) throws ExecutionException, InterruptedException {
+        Runnable runnableThread = ()->{
+            showNameThread();
+            showPriority();
+        };
+
+        Thread thread1 = new Thread(runnableThread,"thread 1");
+        Thread thread2 = new Thread(runnableThread,"thread 2");
+        Thread thread3 = new Thread(runnableThread,"thread 3");
+
+        thread1.setPriority(Thread.MIN_PRIORITY);
+        thread2.setPriority(Thread.NORM_PRIORITY);
+        thread3.setPriority(Thread.MAX_PRIORITY);
+
+        thread3.start();
+        thread2.start();
+        thread1.start();
+        Thread.yield();
+        System.out.println("thread 1: " +thread1.isAlive());
+        System.out.println("thread 2: " +thread2.isAlive());
+        System.out.println("thread 3: " +thread3.isAlive());
+
+        try {
+            thread1.join();
+            thread2.join();
+            thread3.join();
+        }catch (InterruptedException exception){
+            exception.printStackTrace();
+        }
+        System.out.println("thread 1: " +thread1.isAlive());
+        System.out.println("thread 2: " +thread2.isAlive());
+        System.out.println("thread 3: " +thread3.isAlive());
+        System.out.println("process is finished ");
+        /*Costumer costumerA = new Costumer("Andres",new int[]{2,1,5,2,3});
         Costumer costumerB = new Costumer("Eduardo",new int[]{4,1,4,1,1});
 
         StoreCashier storeCashierA = new StoreCashier("Pedro");
         StoreCashier storeCashierB = new StoreCashier("Pedro");
         long initialTime = System.currentTimeMillis();
         storeCashierA.buy(costumerA,initialTime);
-        storeCashierB.buy(costumerB,initialTime);
+        storeCashierB.buy(costumerB,initialTime);*/
 
         /*MyThread myThread = new MyThread();
         new Thread(myThread).start();/*
@@ -165,5 +197,39 @@ public class Main {
 
    }*/
 
+    private static void showNameThread(){
+        for(int i=0;i<=5;i++){
 
+            System.out.println(Thread.currentThread().getName() + " " + i);
+            try {
+                Thread.sleep(2000);
+            }catch (InterruptedException ex){
+                ex.printStackTrace();
+            }
+        }
+
+    }
+    /*
+    * EL rango de la prioridad es del 1 al 10 esl mas prioritario es el que tiene el valor mas alto
+    * Existen tre constantes para darle prioridad
+    * MIN_PRIORITY 0
+    * NORM_PRIORITY 5
+    * MAX_PRIORITY 10
+    * */
+    private static void showPriority(){
+        System.out.println("Priority : " + Thread.currentThread().getPriority());
+    }
+
+    public static void main(String[] args) {
+        MyThread myThread = new MyThread();
+        myThread.start();
+        for (int i = 0; i <=5 ; i++) {
+            Thread.yield();
+            System.out.println(myThread.getState());
+            Thread.currentThread().interrupt();
+            System.out.println(myThread.getState());
+            System.out.println(Thread.currentThread().getName());
+        }
+
+    }
 }
