@@ -1,17 +1,18 @@
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
+import java.util.concurrent.*;
 
 public class MainCompletableFuture {
+
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //supplyAsynCompletableFutureExample();
         //runAsynCompletableFutureExample();
         //thenApplyCompletableFutureExample();
         //thenAcceptCompletableFutureExample();
         //thenRunCompletableFutureExample();
-        circleArea(3);
+        //circleArea(3);
+        //handleCompletableFuture();
+        //circleAreaHandle(5);
+       circleAreaHandle(3);
     }
-
 
     public static void asynCompletableFutureExample(String[] args) throws ExecutionException, InterruptedException {
         SquareFutureExample squareFutureExample = new SquareFutureExample();
@@ -101,6 +102,55 @@ public class MainCompletableFuture {
 
         CompletableFuture<Double> future = completableFuture.thenApply((diameterSquared)->diameterSquared*Math.PI);
         System.out.println("The Circle Area is:" + future.get());
+
+    }
+
+    public static void excecutorServices() throws ExecutionException, InterruptedException {
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+
+        CompletableFuture <Integer> completableFuture =
+                CompletableFuture.supplyAsync(()->3*3);
+        CompletableFuture<Integer> future = completableFuture.thenApplyAsync((nine)->nine/3);
+        System.out.println(future.get());
+        executor.shutdown();
+
+
+    }
+    public static void handleCompletableFuture() throws ExecutionException, InterruptedException {
+        String name ="andres";
+        CompletableFuture<String>  completableFuture =CompletableFuture.supplyAsync(()->{
+                if(name==null){
+                    throw new RuntimeException("Error...");
+                }
+                return "hi " + name;
+        }).exceptionally(ex-> {
+            return "failure";
+        });
+                //.handle((success,error)->success!= null ? success: "There is an error");
+        //completableFuture.completeExceptionally(new RuntimeException("this is error"));
+        System.out.println(completableFuture.get());
+    }
+    public static void circleAreaHandle(int diameter) throws ExecutionException, InterruptedException {
+        /**
+         *thenApply acepta una instancia de una funcion, lo procesa y devuelve un future, que contiene el valor devuelto por la funcion
+         * */
+        CompletableFuture <Double> completableFuture =
+                CompletableFuture.supplyAsync(()->{
+                        if(diameter <= 0) {
+                            throw new RuntimeException("Error...");
+                        }
+                        return Math.pow(diameter,2);
+                    }).exceptionally(ex-> {
+                            System.out.println("The diameter can not be 0");
+                            throw new ArithmeticException("The diameter can not be 0");
+                            //return Double.valueOf(0);
+                        });
+                        //.handle((success,error)->success > 0 ? success : null);
+
+            if(completableFuture.get() != 0 ) {
+                CompletableFuture<Double> future = completableFuture.thenApply((diameterSquared) -> diameterSquared * Math.PI);
+                System.out.println("The Circle Area is:" + future.get());
+            }
 
     }
 }
