@@ -1,3 +1,5 @@
+package Model;
+
 import observer.pattern.PlayerObserver;
 
 import java.util.LinkedList;
@@ -7,7 +9,7 @@ public class Players {
     private String name;
     private int pointsPerGame;
     private List<PlayerObserver> observers;
-    public Players(String name,Integer pointsPerGame) {
+    public Players(String name, Integer pointsPerGame) {
         this.name = name;
         this.observers = new LinkedList<PlayerObserver>();
         setPointsPerGame(pointsPerGame);

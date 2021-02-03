@@ -16,13 +16,33 @@ Travels.java
  Travels
 MainTravels.java
  MainTravels
-Players.java
- Players
+observer/pattern/LengthObserver.java
+ observer.pattern.LengthObserver
 Employee.java
  Employee
-Team.java
- Team
+observer/pattern/Observer.java
+ observer.pattern.Observer
 MainStreamParallels.java
  MainStreamParallels
-MainTeams.java
- MainTeams
+Model/Subject.java
+ Model.Subject
+observer/pattern/CasesObserver.java
+ observer.pattern.CasesObserver
+observer/pattern/MainObserver.java
+ observer.pattern.MainObserver
+observer/pattern/WordsObserver.java
+ observer.pattern.WordsObserver
+Players.java
+ Players
+Team.java
+ Team
+Model/Players.java
+ Model.Players
+observer/pattern/PlayerObserver.java
+ observer.pattern.PlayerObserver
+Model/Team.java
+ Model.Team
+observer/pattern/MainTeams.java
+ observer.pattern.MainTeams
+observer/pattern/PointsObserver.java
+ observer.pattern.PointsObserver
