@@ -6,3 +6,13 @@ SquareFutureExample.java
  SquareFutureExample
 MainCompletableFuture.java
  MainCompletableFuture
+MainStream.java
+ MainStream
+StreamExamples.java
+ StreamExamples
+Person.java
+ Person
+Travels.java
+ Travels
+MainTravels.java
+ MainTravels
