@@ -5,7 +5,6 @@ import java.util.List;
 public class Team {
     private String name;
     private List<Players> players= new ArrayList<Players>();
-
     public Team(String name) {
         this.name = name;
     }
