@@ -32,6 +32,12 @@ observer/pattern/MainObserver.java
  observer.pattern.MainObserver
 observer/pattern/WordsObserver.java
  observer.pattern.WordsObserver
+observer/pattern/java/MainWeather.java
+ observer.pattern.java.MainWeather
+observer/pattern/java/WeatherObserver.java
+ observer.pattern.java.WeatherObserver
+observer/pattern/java/WeatherObservable.java
+ observer.pattern.java.WeatherObservable
 Players.java
  Players
 Team.java

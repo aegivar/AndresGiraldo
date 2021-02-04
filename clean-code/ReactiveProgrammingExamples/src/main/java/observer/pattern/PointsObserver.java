@@ -1,18 +1,19 @@
 package observer.pattern;
 
 import Model.Players;
-import observer.pattern.PlayerObserver;
+import observer.pattern.java.WeatherObservable;
 
-public class PointsObserver extends PlayerObserver {
-    public PointsObserver(Players players){
-        this.player = players;
-        this.player.registerObserver(this);
-    }
+import java.util.Observable;
+import java.util.Observer;
+
+public class PointsObserver implements Observer {
+
+    private Players player;
 
     @Override
-    public void update() {
+    public void update(Observable o, Object arg) {
+        player = (Players) o;
         if(this.player.getPointsPerGame() >= 35)
-             System.out.println("Player " + this.player.getName() + " has " + this.player.getPointsPerGame() +" points per game");
+            System.out.println( this.player.getName() + " has " + this.player.getPointsPerGame() +" points per game");
     }
-
 }

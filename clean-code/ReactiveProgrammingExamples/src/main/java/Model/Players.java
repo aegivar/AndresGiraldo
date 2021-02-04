@@ -4,8 +4,10 @@ import observer.pattern.PlayerObserver;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Observable;
 
-public class Players {
+
+public class Players extends Observable {
     private String name;
     private int pointsPerGame;
     private List<PlayerObserver> observers;
@@ -13,6 +15,8 @@ public class Players {
         this.name = name;
         this.observers = new LinkedList<PlayerObserver>();
         setPointsPerGame(pointsPerGame);
+        setChanged();
+        //notifyObservers();
     }
 
 
@@ -23,6 +27,7 @@ public class Players {
     public void setPointsPerGame(int pointsPerGame) {
         this.pointsPerGame = pointsPerGame;
         notifyObservers();
+
     }
 
     public String getName() {
@@ -32,7 +37,7 @@ public class Players {
     public void setName(String name) {
         this.name = name;
     }
-    public void registerObserver(PlayerObserver...observers){
+    /*public void registerObserver(PlayerObserver...observers){
         for(PlayerObserver observer : observers){
             this.observers.add(observer);
         }
@@ -45,5 +50,5 @@ public class Players {
 
     public void remove(PlayerObserver observer){
         observers.remove(observer);
-    }
+    }*/
 }

@@ -15,19 +15,19 @@ public class MainTeams {
         long timeAfter;
         final  int MIN_POINTS_PER_GAME = 0;
         final  int MAX_POINTS_PER_GAME = 40;
-
+        PointsObserver pointsObserver= new PointsObserver();
         List<Team> teams = new ArrayList<Team>();
         for (int i = 0; i < 60; i++) {
             teams.add(new Team("Team " + i));
         }
-        //Players player = new Players("Andres",35);
-
+        Players player = new Players("Andres",35);
+        player.addObserver(pointsObserver);
         for (Team team : teams) {
             for (int i = 0; i < 20 ; i++) {
-                Players player =  new Players("Player " + i + " for " + team.getName(),new Random().ints(MIN_POINTS_PER_GAME, MAX_POINTS_PER_GAME)
+                 player =  new Players("Player " + i + " for " + team.getName(),new Random().ints(MIN_POINTS_PER_GAME, MAX_POINTS_PER_GAME)
                         .findFirst()
                         .getAsInt());
-                new PointsObserver(player);
+                player.addObserver(pointsObserver);
                 team.addPlayer(player);
             }
         }
