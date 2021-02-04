@@ -1,54 +1,62 @@
-MainFutureExample.java
- MainFutureExample
+Players.java
+ Players
 SquareCallableExample.java
  SquareCallableExample
+Employee.java
+ Employee
+reactiveStream/PrintSubscriber.java
+ reactiveStream.PrintSubscriber
+observer/pattern/MainObserver.java
+ observer.pattern.MainObserver
 SquareFutureExample.java
  SquareFutureExample
+observer/pattern/PlayerObserver.java
+ observer.pattern.PlayerObserver
+observer/pattern/Observer.java
+ observer.pattern.Observer
+Model/Team.java
+ Model.Team
+observer/pattern/java/MainWeather.java
+ observer.pattern.java.MainWeather
+observer/pattern/PointsObserver.java
+ observer.pattern.PointsObserver
+observer/pattern/java/WeatherObservable.java
+ observer.pattern.java.WeatherObservable
 MainCompletableFuture.java
  MainCompletableFuture
-MainStream.java
- MainStream
-StreamExamples.java
- StreamExamples
-Person.java
- Person
+observer/pattern/CasesObserver.java
+ observer.pattern.CasesObserver
 Travels.java
  Travels
+Model/Subject.java
+ Model.Subject
+reactiveStream/Sleeper.java
+ reactiveStream.Sleeper
+observer/pattern/MainTeams.java
+ observer.pattern.MainTeams
+reactiveStream/PowProcessor.java
+ reactiveStream.PowProcessor
+MainFutureExample.java
+ MainFutureExample
 MainTravels.java
  MainTravels
 observer/pattern/LengthObserver.java
  observer.pattern.LengthObserver
-Employee.java
- Employee
-observer/pattern/Observer.java
- observer.pattern.Observer
 MainStreamParallels.java
  MainStreamParallels
-Model/Subject.java
- Model.Subject
-observer/pattern/CasesObserver.java
- observer.pattern.CasesObserver
-observer/pattern/MainObserver.java
- observer.pattern.MainObserver
-observer/pattern/WordsObserver.java
- observer.pattern.WordsObserver
-observer/pattern/java/MainWeather.java
- observer.pattern.java.MainWeather
 observer/pattern/java/WeatherObserver.java
  observer.pattern.java.WeatherObserver
-observer/pattern/java/WeatherObservable.java
- observer.pattern.java.WeatherObservable
-Players.java
- Players
+Person.java
+ Person
 Team.java
  Team
 Model/Players.java
  Model.Players
-observer/pattern/PlayerObserver.java
- observer.pattern.PlayerObserver
-Model/Team.java
- Model.Team
-observer/pattern/MainTeams.java
- observer.pattern.MainTeams
-observer/pattern/PointsObserver.java
- observer.pattern.PointsObserver
+observer/pattern/WordsObserver.java
+ observer.pattern.WordsObserver
+MainStream.java
+ MainStream
+StreamExamples.java
+ StreamExamples
+reactiveStream/Main.java
+ reactiveStream.Main
