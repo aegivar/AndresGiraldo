@@ -10,6 +10,8 @@ import java.util.Observable;
 public class Players extends Observable {
     private String name;
     private int pointsPerGame;
+    private Double triplePercentage;
+
     private List<PlayerObserver> observers;
     public Players(String name, Integer pointsPerGame) {
         this.name = name;
@@ -19,6 +21,19 @@ public class Players extends Observable {
         //notifyObservers();
     }
 
+    public Players(String name, Double triplePercentage) {
+        this.name = name;
+        this.triplePercentage = triplePercentage;
+        //notifyObservers();
+    }
+
+    public Double getTriplePercentage() {
+        return triplePercentage;
+    }
+
+    public void setTriplePercentage(Double triplePercentage) {
+        this.triplePercentage = triplePercentage;
+    }
 
     public int getPointsPerGame() {
         return pointsPerGame;

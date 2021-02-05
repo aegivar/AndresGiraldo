@@ -1,5 +1,5 @@
-Players.java
- Players
+iterator/pattern/MainTeam.java
+ iterator.pattern.MainTeam
 SquareCallableExample.java
  SquareCallableExample
 Employee.java
@@ -10,12 +10,13 @@ observer/pattern/MainObserver.java
  observer.pattern.MainObserver
 SquareFutureExample.java
  SquareFutureExample
-observer/pattern/PlayerObserver.java
- observer.pattern.PlayerObserver
+observer/pattern/WordsObserver.java
+ observer.pattern.WordsObserver
 reactiveStreamExercise/PrintSubscriberPlayer.java
  reactiveStreamExercise.PrintSubscriberPlayer
-Model/Team.java
- Model.Team
+iterator/pattern/ListTeam.java
+ iterator.pattern.ListTeam
+ iterator.pattern.ListTeam$1
 observer/pattern/Observer.java
  observer.pattern.Observer
 observer/pattern/java/MainWeather.java
@@ -37,10 +38,10 @@ reactiveStream/Sleeper.java
 iterator/pattern/MultiplyList.java
  iterator.pattern.MultiplyList
  iterator.pattern.MultiplyList$1
-observer/pattern/MainTeams.java
- observer.pattern.MainTeams
-observer/pattern/PointsObserver.java
- observer.pattern.PointsObserver
+observer/pattern/java/WeatherObserver.java
+ observer.pattern.java.WeatherObserver
+Person.java
+ Person
 StreamExamples.java
  StreamExamples
 reactiveStream/PowProcessor.java
@@ -49,32 +50,31 @@ MainFutureExample.java
  MainFutureExample
 MainTravels.java
  MainTravels
-reactiveStreamExercise/MainTeams.java
- reactiveStreamExercise.MainTeams
+MainStream.java
+ MainStream
 iterator/pattern/Main.java
  iterator.pattern.Main
 observer/pattern/LengthObserver.java
  observer.pattern.LengthObserver
 MainStreamParallels.java
  MainStreamParallels
-observer/pattern/java/WeatherObserver.java
- observer.pattern.java.WeatherObserver
-Person.java
- Person
-reactiveStreamExercise/PlayerObserver.java
- reactiveStreamExercise.PlayerObserver
 reactiveStreamExercise/PointsProcessor.java
  reactiveStreamExercise.PointsProcessor
+Players.java
+ Players
 Team.java
  Team
 Model/Players.java
  Model.Players
-observer/pattern/WordsObserver.java
- observer.pattern.WordsObserver
-MainStream.java
- MainStream
-iterator/pattern/MainTeam.java
- iterator.pattern.MainTeam
-iterator/pattern/ListTeam.java
- iterator.pattern.ListTeam
- iterator.pattern.ListTeam$1
+observer/pattern/PlayerObserver.java
+ observer.pattern.PlayerObserver
+reactiveStreamExercise/PlayerObserver.java
+ reactiveStreamExercise.PlayerObserver
+observer/pattern/PointsObserver.java
+ observer.pattern.PointsObserver
+reactiveStreamExercise/MainTeams.java
+ reactiveStreamExercise.MainTeams
+Model/Team.java
+ Model.Team
+observer/pattern/MainTeams.java
+ observer.pattern.MainTeams

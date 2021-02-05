@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rxjava.reactive.RxJavaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T14:08:39" hostname="PSLT4053" time="0.118">
+<testsuite name="rxjava.reactive.RxJavaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-05T19:45:16" hostname="PSLT4053" time="10.149">
   <properties/>
-  <testcase name="showMethodRxjavaTestExcercise()" classname="rxjava.reactive.RxJavaTest" time="0.118"/>
-  <system-out><![CDATA[completed
+  <testcase name="intervalExcerciseMatchTest()" classname="rxjava.reactive.RxJavaTest" time="10.149"/>
+  <system-out><![CDATA[Points Team A  : 0
+Points Team A  : 2
+Points Team A  : 6
+Points Team A  : 12
+Points Team A  : 20
+Points Team B :8
+Points Team A  : 30
+Points Team B :18
+Points Team A  : 42
+Points Team B :30
+Points Team A  : 56
+Points Team B :44
+Points Team A  : 72
+Points Team B :60
+Points Team A  : 90
+Points Team B :78
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
