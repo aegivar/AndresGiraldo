@@ -12,14 +12,16 @@ SquareFutureExample.java
  SquareFutureExample
 observer/pattern/PlayerObserver.java
  observer.pattern.PlayerObserver
-observer/pattern/Observer.java
- observer.pattern.Observer
+reactiveStreamExercise/PrintSubscriberPlayer.java
+ reactiveStreamExercise.PrintSubscriberPlayer
 Model/Team.java
  Model.Team
+observer/pattern/Observer.java
+ observer.pattern.Observer
 observer/pattern/java/MainWeather.java
  observer.pattern.java.MainWeather
-observer/pattern/PointsObserver.java
- observer.pattern.PointsObserver
+reactiveStream/Main.java
+ reactiveStream.Main
 observer/pattern/java/WeatherObservable.java
  observer.pattern.java.WeatherObservable
 MainCompletableFuture.java
@@ -32,14 +34,25 @@ Model/Subject.java
  Model.Subject
 reactiveStream/Sleeper.java
  reactiveStream.Sleeper
+iterator/pattern/MultiplyList.java
+ iterator.pattern.MultiplyList
+ iterator.pattern.MultiplyList$1
 observer/pattern/MainTeams.java
  observer.pattern.MainTeams
+observer/pattern/PointsObserver.java
+ observer.pattern.PointsObserver
+StreamExamples.java
+ StreamExamples
 reactiveStream/PowProcessor.java
  reactiveStream.PowProcessor
 MainFutureExample.java
  MainFutureExample
 MainTravels.java
  MainTravels
+reactiveStreamExercise/MainTeams.java
+ reactiveStreamExercise.MainTeams
+iterator/pattern/Main.java
+ iterator.pattern.Main
 observer/pattern/LengthObserver.java
  observer.pattern.LengthObserver
 MainStreamParallels.java
@@ -48,6 +61,10 @@ observer/pattern/java/WeatherObserver.java
  observer.pattern.java.WeatherObserver
 Person.java
  Person
+reactiveStreamExercise/PlayerObserver.java
+ reactiveStreamExercise.PlayerObserver
+reactiveStreamExercise/PointsProcessor.java
+ reactiveStreamExercise.PointsProcessor
 Team.java
  Team
 Model/Players.java
@@ -56,7 +73,8 @@ observer/pattern/WordsObserver.java
  observer.pattern.WordsObserver
 MainStream.java
  MainStream
-StreamExamples.java
- StreamExamples
-reactiveStream/Main.java
- reactiveStream.Main
+iterator/pattern/MainTeam.java
+ iterator.pattern.MainTeam
+iterator/pattern/ListTeam.java
+ iterator.pattern.ListTeam
+ iterator.pattern.ListTeam$1

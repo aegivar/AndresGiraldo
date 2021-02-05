@@ -7,16 +7,25 @@ public class PowProcessor extends SubmissionPublisher<Integer> implements Flow.P
 
     private Flow.Subscription subscription;
 
+    //conexion con la fuente de flujo de datos
     @Override
     public void onSubscribe(Flow.Subscription subscription) {
         this.subscription = subscription;
-        subscription.request(1);
+        subscription.request(2);
     }
 
+    /**
+     * Procesa los datos que vienen del flujo de datos
+     * */
     @Override
     public void onNext(Integer item) {
+        /*** endica los datos al consumidor*/
         submit(item * item);
-        subscription.request(1);
+
+        /**
+         * controla la cantidad de datos y se gestionan los hilos
+         * **/
+        subscription.request(2);
     }
 
     @Override
