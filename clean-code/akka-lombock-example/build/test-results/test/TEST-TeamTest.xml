@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TeamTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-02-09T00:18:08" hostname="PSLT4053" time="0.058">
+  <properties/>
+  <testcase name="newTeam()" classname="TeamTest" time="0.058"/>
+  <system-out><![CDATA[Player(name=Shaq, lastName=o'neal)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
