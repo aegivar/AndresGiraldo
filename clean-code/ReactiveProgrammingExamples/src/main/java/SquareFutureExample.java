@@ -5,9 +5,6 @@ import java.util.concurrent.Future;
 public class SquareFutureExample {
     private final ExecutorService executor = Executors.newFixedThreadPool(2);
 
- /*   public SquareFutureExample(ExecutorService executor) {
-        this.executor = executor;
-    }*/
 
     public Future<Integer> calculate1(Integer input){
         CompletableFuture<Integer> completableFuture = new CompletableFuture<>();
