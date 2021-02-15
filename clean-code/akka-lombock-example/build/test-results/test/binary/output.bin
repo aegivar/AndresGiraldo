@@ -1,1 +1,2 @@
-$Player(name=Shaq, lastName=o'neal)
+t20:43:30.747 [test-system-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+­20:43:31.095 [test-system-akka.actor.default-dispatcher-5] INFO akka.actor.LocalActorRef - Message [java.lang.String] from Actor[akka://test-system/system/testActor-1#-917391493] to Actor[akka://test-system/system/testActor-1/test#-209503694] was unhandled. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.

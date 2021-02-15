@@ -1,8 +1,19 @@
-MainGame.java
- MainGame
 Model/Player.java
  Model.Player
  Model.Player$Message
+Model/WordCounterActor.java
+ Model.WordCounterActor
+ Model.WordCounterActor$CountWords
+Model/ReadingActor.java
+ Model.ReadingActor
+ Model.ReadingActor$ReadLines
+Model/MyActor.java
+ Model.MyActor
+Model/PrinterActor.java
+ Model.PrinterActor
+ Model.PrinterActor$PrintFinalResult
 Model/Team.java
  Model.Team
  Model.Team$Message
+MainGame.java
+ MainGame

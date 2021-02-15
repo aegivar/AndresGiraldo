@@ -22,7 +22,7 @@ public class Player extends UntypedAbstractActor {
         PASS_BALL,
         THROW_BALL
     }
-
+    @NonNull
     private String name;
 
     private String lastName;
