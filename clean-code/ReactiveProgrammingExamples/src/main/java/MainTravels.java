@@ -22,12 +22,7 @@ public class MainTravels {
         people.add(personTwo);
 
         String contries="";
-        /*for (Person person : people) {
-            for (Travels travel : person.getTravelsList()){
-                System.out.println(travel.getPais());
-            }
 
-        }*/
 
         people.stream().map(person -> person.getTravelsList())
                         .flatMap((travels) -> travels.stream())

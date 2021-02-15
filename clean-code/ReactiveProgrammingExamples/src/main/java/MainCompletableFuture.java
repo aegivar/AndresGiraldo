@@ -3,21 +3,11 @@ import java.util.concurrent.*;
 public class MainCompletableFuture {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        //supplyAsynCompletableFutureExample();
-        //runAsynCompletableFutureExample();
-        //thenApplyCompletableFutureExample();
-        //thenAcceptCompletableFutureExample();
-        //thenRunCompletableFutureExample();
-        //circleArea(3);
-        //handleCompletableFuture();
-        //circleAreaHandle(5);
        circleAreaHandle(3);
     }
 
     public static void asynCompletableFutureExample(String[] args) throws ExecutionException, InterruptedException {
         SquareFutureExample squareFutureExample = new SquareFutureExample();
-        //Future<Integer> completableFuture = squareFutureExample.calculate(12);
-
         Future<Integer> completableFuture = CompletableFuture.completedFuture(squareFutureExample.calculate(12)) ;
 
         Integer result = completableFuture.get();
@@ -27,7 +17,6 @@ public class MainCompletableFuture {
 
     public static void supplyAsynCompletableFutureExample() throws ExecutionException, InterruptedException {
         SquareFutureExample squareFutureExample = new SquareFutureExample();
-        //Future<Integer> completableFuture = squareFutureExample.calculate(12);
 
         //supplyAsync es una interfaz funcional que no recibe kprametros pero si devuelve un valor
         Future<Integer> completableFuture =
@@ -40,20 +29,15 @@ public class MainCompletableFuture {
 
     public static void runAsynCompletableFutureExample() throws ExecutionException, InterruptedException {
         SquareFutureExample squareFutureExample = new SquareFutureExample();
-        //Future<Integer> completableFuture = squareFutureExample.calculate(12);
-
         //supplyAsync es una interfaz funcional que no recibe prámetros y no retorna nada
         Future<Void> completableFuture =
                 CompletableFuture.runAsync(()-> System.out.println("The result Is:" + 3*3)) ;
 
-        //Integer result = completableFuture.get();
-        //System.out.println("The result Is:" + result);
         squareFutureExample.shutDown();
     }
 
     public static void thenApplyCompletableFutureExample() throws ExecutionException, InterruptedException {
         SquareFutureExample squareFutureExample = new SquareFutureExample();
-        //Future<Integer> completableFuture = squareFutureExample.calculate(12);
         /**
          *thenApply acepta una instancia de una funcion, lo procesa y devuelve un future, que contiene el valor devuelto por la funcion
          * */
@@ -67,7 +51,7 @@ public class MainCompletableFuture {
         CompletableFuture<Integer> future = completableFuture.thenApply((nine)->nine/3);
         System.out.println("The result Is:" + future.get());
         System.out.println(futureGreat.get());
-        //squareFutureExample.shutDown();
+
     }
 
     public static void thenAcceptCompletableFutureExample() throws ExecutionException, InterruptedException {
@@ -126,8 +110,6 @@ public class MainCompletableFuture {
         }).exceptionally(ex-> {
             return "failure";
         });
-                //.handle((success,error)->success!= null ? success: "There is an error");
-        //completableFuture.completeExceptionally(new RuntimeException("this is error"));
         System.out.println(completableFuture.get());
     }
     public static void circleAreaHandle(int diameter) throws ExecutionException, InterruptedException {
@@ -143,9 +125,9 @@ public class MainCompletableFuture {
                     }).exceptionally(ex-> {
                             System.out.println("The diameter can not be 0");
                             throw new ArithmeticException("The diameter can not be 0");
-                            //return Double.valueOf(0);
+
                         });
-                        //.handle((success,error)->success > 0 ? success : null);
+
 
             if(completableFuture.get() != 0 ) {
                 CompletableFuture<Double> future = completableFuture.thenApply((diameterSquared) -> diameterSquared * Math.PI);

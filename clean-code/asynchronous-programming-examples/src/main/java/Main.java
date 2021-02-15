@@ -9,7 +9,7 @@ import com.jcabi.aspects.Async;
 
 import java.util.concurrent.*;
 public class Main {
-    //private static final long NUMBER = 8;
+
     private static final long X = 5;
     private static final long Y = 2;
     private static MathematicsOperations mathematicsOperations = new MathematicsOperations();
@@ -70,17 +70,6 @@ public class Main {
             System.out.println(myThreads[i].getName());
         }*/
 
-        //aspectsConcat();
-        //aspectsCalc();
-        //aspectsExaple();
-        //cactoosEjemplo();
-        //eaEjrmplo();
-        //ejempliGuava();
-        //*****parte1
-        //ejercicio 1
-        //ejemploHiloOperaciones();
-        //ejemploExcecutor();
-        //completable();
 
     }
 

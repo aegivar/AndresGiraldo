@@ -41,9 +41,7 @@ public class StreamExamples {
                  .forEach(employee->showEmployee(employee));
     }
 
-    /*public void flatmap() {
-        employees.flatMap((employee)->employee.);
-    }*/
+
     public void skip(){
         employees.skip(3)
         .forEach(employees->showEmployee(employees));
