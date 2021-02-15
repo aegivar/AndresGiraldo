@@ -1,0 +1,4 @@
+google cloud - >Container Registry
+aws ->ECR
+azure dev ops ->Container Registry
+oracle cloud ->Oracle Container Registry
