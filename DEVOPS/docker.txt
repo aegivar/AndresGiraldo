@@ -1,0 +1,5 @@
+docker pull postgres:alpine
+docker pull tomcat:jre8-alpine
+docker pull python:alpine3.13
+docker pull elixir:alpine
+docker pull node:alpine3.13
