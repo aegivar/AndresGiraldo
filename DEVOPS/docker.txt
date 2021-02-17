@@ -3,3 +3,13 @@ docker pull tomcat:jre8-alpine
 docker pull python:alpine3.13
 docker pull elixir:alpine
 docker pull node:alpine3.13
+
+---Recomendaciones
+Un servicio es una aplicacion y solo debe tener un jar
+Usar imagenes oficiales
+Nunca usa la imagen latest
+Todos los proyectos deben tener la salida standar del los log
+los datos confidenciales se deben manejar con secrets
+cada empresa debe tener su registry privado
+Antes de cualquier cosa revisar puertos y conexiones
+Tener organizados en un excel las url y puertos de lo que se va usar en el los proyectos
